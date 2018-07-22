@@ -1,15 +1,9 @@
-import cv2, sys
+import cv2, os
 
-# imagePath = sys.argv[0]
-# cascPath = sys.argv[1]
+dir_path = os.path.dirname(os.path.realpath(__file__))
+dir_path = dir_path + '\mouth.xml'
 
-# print(imagePath)
-# print(cascPath)
-
-# mouthDetect = cv2.CascadeClassifier('G:\\User Data\\Desktop\\APP\\mouth.xml')
-
-mouthDetect = cv2.CascadeClassifier('/app/mouth.xml')
-
+mouthDetect = cv2.CascadeClassifier(dir_path)
 cam = cv2.VideoCapture(0)
 
 while (True):
