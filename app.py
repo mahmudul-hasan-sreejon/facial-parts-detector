@@ -6,7 +6,9 @@ import cv2, sys
 # print(imagePath)
 # print(cascPath)
 
-mouthDetect = cv2.CascadeClassifier('G:\\User Data\\Desktop\\APP\\mouth.xml')
+# mouthDetect = cv2.CascadeClassifier('G:\\User Data\\Desktop\\APP\\mouth.xml')
+
+mouthDetect = cv2.CascadeClassifier('/app/mouth.xml')
 
 cam = cv2.VideoCapture(0)
 
