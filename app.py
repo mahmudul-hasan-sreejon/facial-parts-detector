@@ -21,7 +21,7 @@ predictor = dlib.shape_predictor(shape_predictor_path)
 
 
 # load the input image, resize it, and convert it to grayscale
-image_path = "images\\example_01.jpg"
+image_path = "images\\example_02.jpg"
 image = cv2.imread(image_path)
 
 # image = cv2.imread(args["image"])
@@ -42,8 +42,7 @@ for (i, rect) in enumerate(rects):
 	for (name, (i, j)) in face_utils.FACIAL_LANDMARKS_IDXS.items():
 		# clone the original image so we can draw on it, then display the name of the face part on the image
 		clone = image.copy()
-		cv2.putText(clone, name, (10, 30), cv2.FONT_HERSHEY_SIMPLEX,
-			0.7, (0, 0, 255), 2)
+		cv2.putText(clone, name, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
 
 		# loop over the subset of facial landmarks, drawing the specific face part
 		for (x, y) in shape[i:j]:
@@ -58,8 +57,9 @@ for (i, rect) in enumerate(rects):
 		cv2.imshow("ROI", roi)
 		cv2.imshow("Image", clone)
 		cv2.waitKey(0)
+		if name == "mouth":
+			break;
 
-	# visualize all facial landmarks with a transparent overlay
-	output = face_utils.visualize_facial_landmarks(image, shape)
-	cv2.imshow("Image", output)
-	cv2.waitKey(0)
+	# output = face_utils.visualize_facial_landmarks(image, shape)
+	# cv2.imshow("Image", output)
+	# cv2.waitKey(0)
