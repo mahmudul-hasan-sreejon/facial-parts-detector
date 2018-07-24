@@ -49,11 +49,6 @@ for (i, rect) in enumerate(rects):
 		for (x, y) in shape[i:j]:
 			cv2.circle(clone, (x, y), 2, (0, 0, 255), -1)
 
-		# output = face_utils.visualize_facial_landmarks(image, shape)
-		output = visualize_facial_landmarks(image, shape)
-		cv2.imshow("Image", output)
-		cv2.waitKey(0)
-
 		# extract the ROI of the face region as a separate image
 		(x, y, w, h) = cv2.boundingRect(np.array([shape[i:j]]))
 		roi = image[y:y + h, x:x + w]
@@ -67,6 +62,6 @@ for (i, rect) in enumerate(rects):
 		if name == "mouth":
 			break;
 
-	# output = face_utils.visualize_facial_landmarks(image, shape)
-	# cv2.imshow("Image", output)
-	# cv2.waitKey(0)
+	output = visualize_facial_landmarks(image, shape)
+	cv2.imshow("Image", output)
+	cv2.waitKey(0)
