@@ -1,6 +1,8 @@
-# Instructions
+# Detect Various Face Parts
 
-1. Install Python 2.7.15.
+## Installation
+
+1. Install Python 2.7.15 (64-bit) or higher.
 
 2. Upgrade your pip by using this command in terminal:
 
@@ -20,7 +22,7 @@ $ pip install scikit-image
 
 4. After that download dlib package from:
 
-[https://pypi.org/project/dlib/18.17.100/#files](https://pypi.org/project/dlib/18.17.100/#files)
+- [https://pypi.org/project/dlib/18.17.100/#files](https://pypi.org/project/dlib/18.17.100/#files)
 
 5. Then install the dlib package by using this command:
 
