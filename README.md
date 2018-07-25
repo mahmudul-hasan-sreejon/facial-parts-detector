@@ -12,12 +12,13 @@
 
 <pre>
 $ pip install numpy
+$ pip install matplotlib
 $ pip install opencv-python
 $ pip install boost
-$ pip install imutils
 $ pip install python-xlib
 $ pip install scipy
 $ pip install scikit-image
+$ pip install imutils
 </pre>
 
 4. After that download dlib package from:
