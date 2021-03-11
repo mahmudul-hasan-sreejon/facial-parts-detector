@@ -1,4 +1,6 @@
-# Detect Various Face Parts
+# Facial Parts Detector
+
+Detect facial features such as eye, nose, mouth etc. by performing many subsequent facial image analysis tasks.
 
 ## Installation
 
@@ -28,3 +30,7 @@ $ pip install imutils
 5. Then install the dlib package by using this command:
 
 <pre>$ pip install < package-name >.< file-extension ></pre>
+
+## Author
+
+Created and maintained by Mahmudul Hasan Sreejon ([@mahmudul-hasan-sreejon](https://www.mahmudul-hasan-sreejon.com/)).
